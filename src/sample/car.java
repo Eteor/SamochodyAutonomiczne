@@ -1,9 +1,10 @@
 package sample;
 
+import java.util.concurrent.TimeUnit;
+
 public class car {
 
     int currentSpeed=0;
-    int minimumSpeed=0;
 
 
     public void accelerate()
@@ -19,11 +20,14 @@ public class car {
         else;
     }
 
-    public int looseSpeed(int speed)
-    {
-        speed-=1;
-        return speed;
-    }
+   /* public void looseSpeed() throws InterruptedException {
+        while(currentSpeed>0){
+            currentSpeed-=1;
+            TimeUnit.SECONDS.sleep(1);
+
+        }
+
+    }*/
 
 
 }
