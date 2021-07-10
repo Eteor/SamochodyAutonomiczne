@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -11,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button layoutX="43.0" layoutY="79.0" mnemonicParsing="false" onAction="#AcceleratorAction" text="AcceleratorPedal">
+      <Button layoutX="43.0" layoutY="79.0" mnemonicParsing="false" onAction="#AcceleratorAction" onMousePressed="#AcceleratorAction" text="AcceleratorPedal">
          <font>
             <Font size="30.0" />
          </font>
@@ -30,37 +32,32 @@
             <Font size="40.0" />
          </font>
       </Text>
-      <Text layoutX="442.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RoadSign">
-         <font>
-            <Font size="40.0" />
-         </font>
-      </Text>
       <Button layoutX="95.0" layoutY="518.0" mnemonicParsing="false" text="BlindSpotB">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <Button layoutX="902.0" layoutY="364.0" mnemonicParsing="false" text="RoadSign1">
+      <Button id="przycisk1" layoutX="902.0" layoutY="364.0" mnemonicParsing="false" onAction="#sign1act" text="RoadSign1">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="902.0" layoutY="404.0" mnemonicParsing="false" text="RoadSign2">
+      <Button layoutX="902.0" layoutY="404.0" mnemonicParsing="false" onAction="#sign2act" text="RoadSign2">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="902.0" layoutY="445.0" mnemonicParsing="false" text="RoadSign2">
+      <Button layoutX="902.0" layoutY="445.0" mnemonicParsing="false" onAction="#sign3act" text="RoadSign2">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="902.0" layoutY="485.0" mnemonicParsing="false" text="RoadSign2">
+      <Button layoutX="902.0" layoutY="485.0" mnemonicParsing="false" onAction="#sign4act" text="RoadSign2">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="902.0" layoutY="525.0" mnemonicParsing="false" text="RoadSign2">
+      <Button layoutX="902.0" layoutY="525.0" mnemonicParsing="false" onAction="#sign5act" text="RoadSign2">
          <font>
             <Font size="15.0" />
          </font>
@@ -70,6 +67,11 @@
             <Font size="70.0" />
          </font>
       </Label>
-      <CheckBox layoutX="912.0" layoutY="585.0" mnemonicParsing="false" onAction="#CheckClick" text="CheckBox" />
+      <CheckBox layoutX="912.0" layoutY="585.0" mnemonicParsing="false" text="CheckBox" />
+      <ImageView fx:id="displaySign" fitHeight="200.0" fitWidth="200.0" layoutX="437.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@empty.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
